@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ecommerce site</title>
+    <!-- link to css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <header>
+      <!-- nav -->
+      <div class="nav container">
+        <!-- logo -->
+        <a href="" class="logo">
+          <img src="img/LOGO3.png" text="DharamJan Tyre" alt="click me" />
+        </a>
+        <!-- menu bar -->
+        <i class="bx bx-menu" id="menu-icon" data-quantity="0"></i>
+        <div class="menu">
+          <h2 clas="menu-title"></h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+            <li><a href="contact.html" target="_blank">Contact Us</a></li>
+            <li><a href="login.html" >Login</a></li>
+            <!-- <li><a href="mycart.html" target="_blank"></a></li> -->
+          </ul>
+          <i class="bx bx-arrow-back" id="close-menu"></i>
+        </div>
+        <!-- search button -->
+        <div class="search">
+          <input type="text" name="" id="search-item" placeholder="search product" onkeyup="search()">
+          <button class="btn">search</button>
+        </div>
+
+        <!-- Cart icon -->
+        <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+        <!-- cart -->
+        <div class="cart">
+          <h2 clas="cart-title">your cart</h2>
+          <!-- content-->
+          <div class="cart-content"></div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
+          <!-- buy-button -->
+          
+           <button type=" button"class="btn-buy"   >Pay Now</button>
+          <!-- close cart -->
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!-- products -->
+    <section class="shop container" id="product-list">
+      <h2 class="section-title">NEW_TIRES</h2>
+      <!-- shop content -->
+      <div class="shop-content">
+        <!-- box 1 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje3tZv3YdlH5rC4sRWJQYDSde2L2KdcqyvWBE2MkqvqKOC0NArEhawvE-ubvIFm-GiugIk15KyN3TCGdJEbTfCHqgJHW2mwZ76H4ODcyQTs2uKusb5OXw4dUJuNXLbBgMnyv7z4bTgUmE1d5v7Py826pvN1Cw1x69xSu9Eq_c0UFmFn4P8Mh1uTtc5cck/s320/Bridgestone1.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bridgestone TYRE <br> size: 215/60 tyota hydra </h2>
+          <sapn class="price">$10125</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 2 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhS32zUJRpJgTtbvAEfqTB8TyZ9xfgIvllVsO5_14bfBSmaxd-6Wfk6nyw5WkFZcvm9ZRV-mzq2rEmQzkV_pgbos2awGteUNHMinvhtNrT6Dedk9ri5x-7lfKXc32eCKoEp7p9BM4uF9OKAKsYrMxjq2qdkt4Dv2BasVvzIkGnfjfCZOu7zRKPxx1jUfQk/s320/Bridgestone.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bridgestone AR10 TT 175/65 <br></h2>
+          <sapn class="price">$9999</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 3 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjE6jApDhiLZu25gG1a7ANsizWzjgBnUqIjz1SyMy4zoDZ_L9NLWoWkvUytD-1k6qmKpOqSSM8tQzgojrUoDzTbfmP2EpWetUaD0bx4ZAt5rICFThc9deu1jMNyCm1RFjnU5eOZ_f-xiGeDSheG8-idzixtkG3VXSPd4rnxsaxe00tu5LPVgrxSogu0pP8/s320/front.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">TUBLESS tYRE RARE <br> size:190/80</h2>
+          <sapn class="price">$3456</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 4 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYFHybLCFGeEwOf_-9QsIMvDtCGyQX-IuLrlTHppwWMVaj7I06r_y-Dea9pWnRpkoEmR6nIKl9QWJ_neXIvvyo-NCYKzvDzomy7yQglu8JhuwECME-yw5Uwa7m_UjOfiF3nlKNEpEYCymizsnJThd03q7PL2Xyr-guSzpE12Y8uZz0nJY2ZgTL5JKr9Zg/s320/maxxis.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">TUBLESS TYRE RARE <br>size:195/90</h2>
+          <sapn class="price">$5012</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 5 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5sQkLwhlMbGKZb3zhhl69fKa4DTJJ0YvEN033cwH5A2OXwfCticRoPEyqgaO4QXWhkYi-dlAQoDzCs5eUYITXVNQzUrODT4CUzFH6YXxPgiyIyhV6Lzhlksu7vrb0laDGT89EUlaaVeyTPtFxZgvd2uq1R199gaihvSIuQ1FBwE1CvNabrY1wCYo1w74/s320/maxxisbike.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">TUBLESS TYRE OF TOTO <br> size:412 </h2>
+          <sapn class="price">$500</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 6 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEjA4MVVGPUH7QJaPUNfIB99aFdLlaMxWK7yrAoOeaxiv-2QvzlaFICk5LhJeo2jOZ3QTyf34xrczv73CJtTsQr0vuQgzOtjs-HzW3KC7_XmeMBrvTq5xDnfnOgn4L2qt7RPXgCZM89GvYDlNdQ68RRfo4BP7lUZY7zXQ1712fegMMh4BAhzxRGyikRCA/s320/michelin.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bridgestone front tyre <br> size:180/85 </h2>
+          <sapn class="price">$5599</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 7 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmsUEughYBE1Sr8a57r3FQLEEGG6bEJkdPBtuM_-kKt2ptD8xzQ-ck9JiqGL7AIfTNBRl5RWybjOnPUAOHMyYKKhdClPxux6Plv0CgRu8nxz6Qzjiuc4Qdx4wr92j3eJX2517_qilyTUkk37Za_hPtIAYxyTm8EHVBC_SmCICkH8i779LeA9yJzGiY_9M/s320/ralco.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">TUBLESS rare tyre <br>size: 185/110</h2>
+          <sapn class="price">$3000</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 8 -->
+
+        <!-- box 9 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha6CrdDDhU7e09cT5lQwpdlgcD7aWbDIgteec7cvwe0P3i8tJUvYlNtrQ2DgddsjyoeBxaiiw1qt24edvQTY63R_P3g6XeYcN2KA2s8bDKqUfG6Cpk0E2pQBi85WOUQf7Wts6AYJDmJi_hgJLXXVlUX-39-wB0ZRiFKWTWXe7zJ70gewKj-DwmCaLSqyo/s320/yokohama.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">suzuki tubless tyre <br>size:185/65 </h2>
+          <sapn class="price">$1200</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <a href="#" class="more-me">Click for more</a>
+      </div>
+   
+   
+
+      <!-- one new shop container -->
+    <!-- products -->
+    <section class="shop container" id="product-list">
+      <h2 class="section-title2">RESOLE_TIRES</h2>
+      <!-- shop content -->
+      <div class="shop-content">
+        <!-- box 1 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/SELLER/Default/2023/9/341740620/PW/AP/KN/195151675/apollo-amar-gold-truck-tyre-500x500.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">truck tyre :1000/20</h2>
+          <sapn class="price">$23050.69</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 2 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/IOS/Default/2023/7/321467725/DU/YS/AA/6782013/product-jpeg-500x500.png"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">truck tyre :1000/20</h2>
+          <sapn class="price">$23050.8</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 3 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/MF/AL/FZ/NSDMERP-81561129/81561129-product-fcp-1550473054609-250x250.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bus ture :920</h2>
+          <sapn class="price">$23050</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 4 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlrEqgURA1BUaPKtAyq6pc0HcYJQz8PdRoLj1MV1TD4q6annqPXx4PDg2EqHhxOO6dsP4xEg4SmC6xuQHsnTDH82KDnF3_-LyNxDVbTjvf4OtF1o_BEiQvjBdViS3ENTOphjxaESf8NSkcRL5RqTmMEUXpEYd3nnXgNfkXuJYUEDEWndOvng-dTL9A-kw/w286-h228/c3pgeoab.png"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Lori tyre :1000/20</h2>
+          <sapn class="price">$15012</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 5 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/CL/MD/MY-44587751/mini-truck-tyre-250x250.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">truck tyre :1000/20</h2>
+          <sapn class="price">$20000</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 6 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/SELLER/Default/2022/10/WG/GB/FO/82440213/apollo-xt7-gold-plus-1000-20-tyres-250x250.png"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Apollo 1000/20</h2>
+          <sapn class="price">$21000</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 7 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://4.imimg.com/data4/OB/FY/NSDMERP-37466697/trucktyremrf-250x250.png"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bus tyre 1000/20</h2>
+          <sapn class="price">$20000</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 8 -->
+
+        <!-- box 9 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://5.imimg.com/data5/SELLER/Default/2023/3/296506431/MQ/QI/DZ/46155920/sunfull-768-tyre-500x500.jpeg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">trailer tyre :	315/80R22.5</h2>
+          <sapn class="price">$30000</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <a href="#" class="more-me">click for more</a>
+      </div>
+    </section>
+    <!-- one new shop content for vehicle -->
+    
+    <!-- products -->
+    <section class="shop container" id="product-list" >
+      <h2 class="section-title2">ALL vehicle Accessories</h2>
+      <!-- shop content -->
+      <div class="shop-content">
+        <!-- box 1 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju0sswtrAOpycUWqR1MK1MZ579w81wcJy-rht4OkvT8SbveXc2AtPnAuap1ozBAP6I__liTyWMjDEnLEabJcbjoNySPiSxUf8RsJLrhknLLWfM2lIe2TKB-Zi9HdZsuf78sKZGNsBXjDfrZmZT5MQ1M3zdhgA7g7kVzptysUED1-x0QOOx0XltdaTs_GI/s1600/wiper%20mahindra.webp"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Car Wiper Windshield <br>Blade</h2>
+          <sapn class="price">$864.69</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 2 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg16FbaTLFd5Yun6oFH4eSqyH4iqnK6bAJu_M2fSMvrMOW_GQjaI2Vwo0fJ-Kgtn3LNl4Ly5LLp6GulnEdp4bx2cbEP22QQ2nAfcPT89pEPXakHHmrCGG56XwLMOFw4bsjGqk6IF-gWZ1eZpXjUlyskE1AkATtiv_oiOZEuXw93nodYIfTjLeaeGZ0tYxc/s320/uno%20light.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Auto right side Light</h2>
+          <sapn class="price">$850.8</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 3 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ1RtLTAoiFNHghpGUa0hYem-wc2O5gQ69qdSa9GxImuXWJYEYv3bIC99JS47pc8xnwnkeHCg7hH5YQAT7bQ0QUS4cVUKGI0CiMaNtBMVHby4lxq5AXuQXMDMcBkHp4nkNyhn_EQdRjoxiIuzb_tV_Vf2nrGoO9_qGJgSnyT-7bihpgbAwYzjBJgFV5J0/s320/safari%20mirror.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">View Sub Mirror Plate <br> glass for Honda</h2>
+          <sapn class="price">$750</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 4 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMtWbDTlhrmxTDa7R_C0vmhCWWx16v8atFAPNc02BED7UUvR9p9oZbRjwKzLKxFsEVmfCJA4iW1j8O8T0-0Pv0LX-shdRpV3UZV5ZvBFOTs5m4Z6re3cGQCGOp37aDfYEaxUGt_QJaQns5odM_b8DChyphenhyphenh0obYrgBN0mDFf9cnwy_1-ljv9H_puDXvAn-Q/s320/door%20handle.webp"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Auto Door Handle <br>hyundai verna </h2>
+          <sapn class="price">$5012</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 5 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilLZL-jHR7UFve4sbNhCT6pGrQjlfy9C9YYBmYUHVs6oIQndzn-SrONrcwtjpsrd2dnwNaAVpfFjFdHvh6_Hh-RFnDMUe9zJG970mUdYSioVbJ7l9_86_AgnevVokt9CD5eJemZRPak8f4He1G0XP2gE4AQ6Hk67ls0Df7yUhFxuUhROJSysK3s-r4_tI/s320/amberbulb.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Royal Headlight <br>1pcs.</h2>
+          <sapn class="price">$520</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 6 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://m.media-amazon.com/images/I/613rLhtlgRL._AC_UL480_QL65_.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title"> handle bar horn</h2>
+          <sapn class="price">$500</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 7 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDRSyV0LliUHF00l5tfM4kpGi9WYpeWjL4-voRGorKpCf9X5fIvtFzTMfh71TK0A1glcKa6psXFsiYNyLZFObbxVTAHhZC8APQ_s7_fbCfzB_KklwlBhLj-lm2G_8CY48RCLnzuOivdjA6fUVdDVM2-JTIFEpmczHysIoZi6h5BZyUmtt346W8lYU7Zvg/s1600/Tata%20manza.webp"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Auto Spare World left <br> mirror 1Pcs. </h2>
+          <sapn class="price">$340</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- box 8 -->
+
+        <!-- box 9 -->
+        <div class="product-box">
+          <!-- stripe need image so .. -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNO7I3f_J8AlJUdnVs8N-E-8Zmt7MEYOSDVzH_PVMgbCEp5QF8ePG7SzkorU72zQoki8nYqejVYP7fnBxL2Ti0Ro9_hk5NDZoldArzJ8AtgSIFO4ts4HqEyNSQsfYUQZJXDD1PjB_-oX-gXIwBRav04bh8Oo0Xz56MALuq51JYO145SskbrOq-cdp06Vw/s320/glass.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">left Side mirror Glass <br> Tata manza 1 Pcs.</h2>
+          <sapn class="price">$650.677</sapn>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <a href="#" class="more-me">click for more</a>
+      </div>
+    </section>
+  </section>
+    <!-- link to JS -->
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script> 
+  </body>
+</html>

@@ -1,0 +1,449 @@
+/* font family imported form google font */
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:ital,wght@0,300;0,400;1,500&family=Ysabeau+Infant:wght@300&display=swap");
+
+* {
+  font-family: "Balsamiq Sans", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* some variable */
+:root {
+  --main-color: #fd4646;
+  --text-color: #02ac70;
+  --bg-color: #fff;
+  --container-color: #1e1e2a;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: var(--bg-color);
+  background: var(--container-color);
+}
+
+.logo img {
+  width: 75px;
+  /* border: 2px solid rgb(217, 101, 101); */
+  padding: 0 6px;
+  margin: 0px 2px;
+}
+
+/* search holder design */
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 10.6rem;
+  
+}
+
+.search input {
+  width: 30vw;
+  height: 30px;
+  border-radius: 9px;
+  margin: 0 20px 0 56px;
+  padding: 0 12px;
+ 
+}
+
+.search button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  border: 3px solid rgb(193, 160, 89);
+border-radius: 20px;
+cursor: pointer;
+height: 28px;
+width: 70px;
+}
+
+section {
+  padding: 5rem 0 3rem;
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--container-color);
+  box-shadow: 0 1px 4px hsla(0, 0%, 98%, 0.1);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  /* background-color: salmon; */
+}
+
+.logo {
+  font-size: 1.1rem;
+  color: var(--bg-color);
+  font-weight: 600;
+}
+
+/* all menu section design */
+
+#menu-icon {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  margin-left: 9.6rem;
+  position: relative;
+  font-size: 2rem;
+  cursor: pointer;
+  /* background-color: blueviolet; */
+}
+#menu-icon[data-quantity="0"]::after {
+  contain: "";
+}
+
+#menu-icon[data-quantity]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* menu */
+.menu {
+  position: fixed;
+  top: 1.68rem;
+  left: -100%;
+  width: 200px;
+  min-height: 50vh;
+  padding: 20px;
+  background: var(--container-color);
+  box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: rgb(110, 45, 110);
+}
+.menu.active {
+  left: 0;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 6rem;
+  /* height: 8px;
+  width: 5px;
+  background-color: violet; */
+
+}
+.menu ul li {
+  margin-top: 3.4rem;
+  list-style: none;
+  padding: 0 23px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul li a:hover {
+  font-weight: bolder;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#close-menu {
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* all cart section design */
+
+#cart-icon {
+  position: relative;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#cart-icon[data-quantity="0"]::after {
+  contain: "";
+}
+
+#cart-icon[data-quantity]::after {
+  content: attr(data-quantity);
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 20px;
+  height: 20px;
+  background: var(--text-color);
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: salmon; */
+}
+
+/* cart */
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 360px;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--container-color);
+  box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* background-color: #fff; */
+}
+.cart.active {
+  right: 0;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.total-price {
+  font-size: 1.075rem;
+  margin: 1rem;
+}
+
+.btn-buy {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 12px;
+  width: 50%;
+  text-align: center;
+  border: none;
+  border-radius: 2rem;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* cart box inside content design */
+
+.cart-box {
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cart-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  object-position: center;
+  padding: 10px;
+  /* background-color: salmon; */
+}
+
+.detail-box {
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+.cart-product-title {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cart-price {
+  font-weight: 500;
+}
+
+.cart-quantity {
+  border: 1px solid var(--text-color);
+  outline-color: var(--main-color);
+  width: 3.8rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.cart-remove {
+  font-size: 24px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.section-title2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+.shop {
+  margin-top: 2rem;
+  /* background-color: salmon; */
+}
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+  /* background-color: greenyellow; */
+}
+.container::-webkit-scrollbar{
+  display: none;
+}
+.shop-content::-webkit-aftersearch{
+  max-width: 4.5rem;
+
+}
+
+/* each product box or container that have img , name and price */
+
+.product-box {
+  position: relative;
+  background: #2d2e37;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.product-box:hover {
+  background: var(--bg-color);
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 8px 32px hsla(0.75, 0.82, 0.165, 1);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.product-box:hover .product-title,
+.product-box:hover .price {
+  color: #060606;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.price {
+  font-weight: 500;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.add-cart:hover {
+  background: hsl(249, 32%, 17%);
+}
+
+/* payment design style */
+.sc-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sc-container img {
+  width: 100px;
+  margin: 2rem 0;
+}
+.sc-btn {
+  padding: 12px 20px;
+  border-radius: 2rem;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.sc-container p {
+  max-width: 600px;
+  font-size: 0.97rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.more-me{
+  font-weight: 600;
+  color: var(--text-color);
+}
